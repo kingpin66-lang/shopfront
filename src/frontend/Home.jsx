@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
     let [data, setData] = useState([])
@@ -15,6 +16,7 @@ function Home() {
         <>
             <div className="container text-center mx-auto">
                 <h1>MY SHOP</h1>
+                <h1><Link to="/dashboard">Dashboard</Link></h1>
                 {data.map((a) => (
                     <h2 key={a._id}>{a.name}</h2>
                 ))}
